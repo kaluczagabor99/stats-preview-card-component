@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
 html {
   box-sizing: border-box;
   font-size: 100%;
@@ -9,4 +11,16 @@ html {
   box-sizing: inherit;
   padding: 0;
   margin: 0;
+}
+
+:root {
+  /* PRIMARY COLORS: */
+  --very-dark-blue: hsl(233, 47%, 7%); /* main background */
+  --dark-desaturated-blue: hsl(244, 38%, 16%); /* card background */
+  --soft-violet: hsl(277, 64%, 61%);
+
+  /* NEUTRAL COLORS */
+  --white: hsl(0, 0%, 100%);
+  --transparent-white-paragraph: hsla(0, 0%, 100%, 0.75); /* main paragraph */
+  --transparent-white-heading: hsla(0, 0%, 100%, 0.6); /* stat headings */
 }
