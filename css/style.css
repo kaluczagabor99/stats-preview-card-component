@@ -27,11 +27,13 @@ html {
 
 @media (max-width: 37.5rem) {
   .card {
-    width: 350px;
-    height: 870px;
+    width: 360px;
   }
 }
 
+body {
+  background-color: var(--very-dark-blue);
+}
 header {
   line-height: 0;
   position: relative;
@@ -43,9 +45,76 @@ header img {
 }
 
 header .overlay {
+  background: var(--soft-violet);
   width: 100%;
   height: 100%;
-  background: var(--soft-violet);
   opacity: 0.5;
   position: absolute;
+}
+
+main {
+  background-color: var(--dark-desaturated-blue);
+  padding: 45px 35px 40px;
+}
+
+main .info h1 {
+  color: var(--white);
+  font-family: "Inter", sans-serif;
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+main .insights {
+  color: var(--soft-violet);
+}
+
+main .info p {
+  color: var(--transparent-white-paragraph);
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+main .stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
+
+main .stats ul li {
+  color: var(--white);
+  list-style: none;
+}
+
+main .stats ul li:nth-child(odd) {
+  font-size: 23px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+main .stats ul li:nth-child(even) {
+  color: var(--transparent-white-heading);
+  font-size: 11px;
+  font-family: "Lexend Deca";
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+main .stats ul li:nth-child(5) {
+  text-transform: uppercase;
+}
+
+main .stats ul li:nth-child(even):not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.card {
+  padding: 23px;
+  border-radius: 5%;
 }
