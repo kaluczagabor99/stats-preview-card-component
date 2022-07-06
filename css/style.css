@@ -24,16 +24,10 @@ html {
   --transparent-white-paragraph: hsla(0, 0%, 100%, 0.75); /* main paragraph */
   --transparent-white-heading: hsla(0, 0%, 100%, 0.6); /* stat headings */
 }
-
-@media (max-width: 37.5rem) {
-  .card {
-    width: 320px;
-  }
-}
-
 body {
   background-color: var(--very-dark-blue);
 }
+
 header {
   line-height: 0;
   position: relative;
@@ -55,29 +49,22 @@ header .overlay {
 
 main {
   background-color: var(--dark-desaturated-blue);
-  padding: 40px 35px;
 }
 
 main .info h1 {
   color: var(--white);
   font-family: "Inter", sans-serif;
-  font-size: 25px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-main .insights {
-  color: var(--soft-violet);
 }
 
 main .info p {
   color: var(--transparent-white-paragraph);
   font-family: "Inter", sans-serif;
-  font-size: 14px;
   line-height: 1.6;
-  text-align: center;
-  margin-bottom: 40px;
   line-height: 1.7;
+}
+
+main .insights {
+  color: var(--soft-violet);
 }
 
 main .stats {
@@ -93,13 +80,23 @@ main .stats ul li {
   list-style: none;
 }
 
-main .stats ul li:nth-child(odd) {
+main .stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
+
+main .stats ul li {
+  color: var(--white);
+  list-style: none;
   font-size: 23px;
   font-weight: bold;
   margin-bottom: 8px;
 }
 
-main .stats ul li:nth-child(even) {
+main .stats ul li small {
   color: var(--transparent-white-heading);
   font-size: 11px;
   font-family: "Lexend Deca";
@@ -107,17 +104,88 @@ main .stats ul li:nth-child(even) {
   letter-spacing: 0.1em;
 }
 
-main .stats ul li:nth-child(5) {
-  text-transform: uppercase;
-}
-
-main .stats ul li:nth-child(even):not(:last-child) {
-  margin-bottom: 30px;
-}
-
 .card {
   padding: 0;
-  margin: 100px 25px;
   border-radius: 8px;
   overflow: hidden;
+}
+
+@media only screen and (max-width: 1205px) {
+  .card {
+    margin: 100px 25px;
+    width: 320px;
+  }
+
+  main {
+    padding: 40px 35px;
+  }
+
+  .info h1 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .info p {
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .stats li:not(:last-child) {
+    padding-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 1204px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  header {
+    width: 50%;
+  }
+
+  main {
+    padding: 85px 120px 75px 72px;
+    width: 50%;
+  }
+
+  img {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 1115px;
+    height: 445px;
+  }
+
+  .info h1 {
+    text-align: left;
+    font-size: 34.5px;
+  }
+
+  .info p {
+    margin-top: 30px;
+    text-align: left;
+    font-size: 15px;
+  }
+
+  .stats ul {
+    padding-top: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  li:last-child {
+    padding-bottom: 20px;
+  }
 }
