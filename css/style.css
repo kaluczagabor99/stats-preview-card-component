@@ -184,8 +184,4 @@ main .stats ul li small {
     align-items: center;
     width: 100%;
   }
-
-  li:last-child {
-    padding-bottom: 20px;
-  }
 }
